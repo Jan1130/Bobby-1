@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Cart Builder</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <h1>🍔 Food Cart</h1>
+
+        <div class="search-container">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search food..."
+            >
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="toolbar">
+
+            <button
+                class="filter-btn active"
+                data-category="All"
+                onclick="setCategory('All')">
+                All
+            </button>
+
+            <button
+                class="filter-btn"
+                data-category="Snacks"
+                onclick="setCategory('Snacks')">
+                Snacks
+            </button>
+
+            <button
+                class="filter-btn"
+                data-category="Drinks"
+                onclick="setCategory('Drinks')">
+                Drinks
+            </button>
+
+            <button
+                class="filter-btn"
+                data-category="Desserts"
+                onclick="setCategory('Desserts')">
+                Desserts
+            </button>
+
+        </section>
+
+
+        <section class="food-section">
+
+            <h2 id="categoryTitle">All Items</h2>
+
+            <div id="foodContainer" class="food-container">
+                <!-- Food cards will be created by JavaScript -->
+            </div>
+
+            <p id="noResults" class="no-results">
+                No food items found.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
